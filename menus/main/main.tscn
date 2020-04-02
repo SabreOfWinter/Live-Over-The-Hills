@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://menus/main/main.gd" type="Script" id=1]
 [ext_resource path="res://menus/main/background.png" type="Texture" id=2]
+[ext_resource path="res://menus/textures/flags_icons/cn.png" type="Texture" id=3]
+[ext_resource path="res://menus/textures/flags_icons/gb.png" type="Texture" id=4]
 
 [node name="main" type="Control"]
 anchor_right = 1.0
@@ -22,12 +24,13 @@ __meta__ = {
 [node name="language" type="OptionButton" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -64.0
+margin_left = -74.0
 margin_top = 10.0
 margin_right = -10.0
 margin_bottom = 20.0
 text = "en"
-items = [ "en", null, false, 0, null, "ch", null, false, 1, null ]
+icon = ExtResource( 4 )
+items = [ "en", ExtResource( 4 ), false, 0, null, "ch", ExtResource( 3 ), false, 1, null ]
 selected = 0
 __meta__ = {
 "_edit_use_anchors_": false
