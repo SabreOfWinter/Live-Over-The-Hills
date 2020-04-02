@@ -29,3 +29,18 @@ func save_settings():
 			settings_file.set_value(section, key, settings_dict[section][key])
 	
 	settings_file.save(SAVE_PATH)
+
+func load_settings():
+	var error = settings_file.load(SAVE_PATH)
+	if error != OK:
+		print("Error loading the settings. Error code: %s" % error)
+		return LOAD_ERROR_COULDNT_OPEN
+	
+	for section in settings_dict.keys():
+		for key in settings_dict[section].keys():
+			
+			var value = settings_file.get_value(section, key)
+			settings_dict[section][key] = value
+			
+			#settings_dict[section][key] = settings_file.get_value(section, key) 
+			#print("%s: %s: %s" % [section, key, value]) # Delete during clean up
