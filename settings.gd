@@ -44,3 +44,15 @@ func load_settings():
 			
 			#settings_dict[section][key] = settings_file.get_value(section, key) 
 			#print("%s: %s: %s" % [section, key, value]) # Delete during clean up
+
+func check_for_file():
+	var dir = Directory.new()
+	var settings_dict = {}
+	if dir.file_exists(SAVE_PATH):
+		#continue
+		load_settings()
+	else:
+		#create file with default settings
+		save_settings()
+
+
