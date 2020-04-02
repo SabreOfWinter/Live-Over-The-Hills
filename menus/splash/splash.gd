@@ -1,6 +1,6 @@
 extends Node
 
-const MAIN_MENU_PATH = "res://"
+const MAIN_MENU_PATH = "res://menus/main/main.tscn"
 
 func _ready():
 	open_main_menu()
