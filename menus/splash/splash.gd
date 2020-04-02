@@ -11,4 +11,4 @@ func _input(event):
 		open_main_menu()
 
 func open_main_menu():
-	loading_screen.goto_scene(main_menu_path)
+	get_tree().change_scene(main_menu_path)

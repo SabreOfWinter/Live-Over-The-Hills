@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://menus/splash/splash.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
 
 [node name="splash" type="Node"]
 script = ExtResource( 1 )
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 1 )
