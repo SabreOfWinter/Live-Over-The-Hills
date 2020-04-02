@@ -59,6 +59,13 @@ func set_settings():
 	load_settings()
 	
 	#General settings
+	match settings_dict["Graphics"]["WindowMode"]:
+		"Fullscreen":
+			OS.window_fullscreen = true
+		"Windowed":
+			OS.window_maximized = true
+		"Borderless":
+			OS.window_borderless = true
 	
 	#Graphic settings
 	
