@@ -67,6 +67,7 @@ func set_settings():
 		"Borderless":
 			OS.window_borderless = true
 	
+	OS.current_screen = settings_dict["Graphics"]["DisplayMonitor"]
 	#Graphic settings
 	
 	#Sound settings
