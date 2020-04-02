@@ -22,3 +22,10 @@ var settings_dict = {
 		"b" : 3
 		}
 	}
+
+func save_settings():
+	for section in settings_dict.keys():
+		for key in settings_dict[section].keys():
+			settings_file.set_value(section, key, settings_dict[section][key])
+	
+	settings_file.save(SAVE_PATH)
