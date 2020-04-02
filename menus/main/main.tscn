@@ -18,3 +18,17 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="language" type="OptionButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 20.0
+text = "en"
+items = [ "en", null, false, 0, null, "ch", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
