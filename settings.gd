@@ -55,4 +55,14 @@ func check_for_file():
 		#create file with default settings
 		save_settings()
 
-
+func set_settings():
+	load_settings()
+	
+	#General settings
+	
+	#Graphic settings
+	
+	#Sound settings
+	
+	#Control settings
+	
