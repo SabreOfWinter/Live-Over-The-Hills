@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Life-Over-The-Hills"
+run/main_scene="res://menus/splash/splash.tscn"
 config/icon="res://icon.png"
 
 [autoload]
