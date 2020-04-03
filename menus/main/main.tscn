@@ -22,12 +22,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="language" type="OptionButton" parent="."]
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="language" type="OptionButton" parent="Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -74.0
-margin_top = 10.0
-margin_right = -10.0
+margin_left = -84.0
+margin_top = 20.0
+margin_right = -20.0
 margin_bottom = 20.0
 text = "en"
 icon = ExtResource( 4 )
@@ -37,56 +44,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 100.0
-margin_top = -136.0
-margin_right = -100.0
-margin_bottom = -100.0
+margin_top = -70.0
+margin_bottom = -40.0
 size_flags_horizontal = 4
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="new_game_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 782.0
-margin_top = 3.0
-margin_right = 818.0
-margin_bottom = 33.0
+[node name="new_game_button" type="TextureButton" parent="Control/HBoxContainer"]
+margin_left = 882.0
+margin_right = 918.0
+margin_bottom = 30.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
-[node name="load_game_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 822.0
-margin_top = 3.0
-margin_right = 858.0
-margin_bottom = 33.0
+[node name="load_game_button" type="TextureButton" parent="Control/HBoxContainer"]
+margin_left = 922.0
+margin_right = 958.0
+margin_bottom = 30.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
-[node name="settings_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 862.0
-margin_top = 3.0
-margin_right = 898.0
-margin_bottom = 33.0
+[node name="settings_button" type="TextureButton" parent="Control/HBoxContainer"]
+margin_left = 962.0
+margin_right = 998.0
+margin_bottom = 30.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
-[node name="quit_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 902.0
-margin_top = 3.0
-margin_right = 938.0
-margin_bottom = 33.0
+[node name="quit_button" type="TextureButton" parent="Control/HBoxContainer"]
+margin_left = 1002.0
+margin_right = 1038.0
+margin_bottom = 30.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
-[connection signal="pressed" from="HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+[connection signal="pressed" from="Control/HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
