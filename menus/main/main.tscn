@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://menus/main/main.gd" type="Script" id=1]
 [ext_resource path="res://menus/main/background.png" type="Texture" id=2]
@@ -48,7 +48,7 @@ tracks/0/path = NodePath("main:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
@@ -57,6 +57,33 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("new_game:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "settings"
+tracks/0/type = "value"
+tracks/0/path = NodePath("main:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -179,7 +206,6 @@ size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
 [node name="new_game" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -609,10 +635,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="settings" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="animation_player" type="AnimationPlayer" parent="."]
 autoplay = "start"
 anims/load_game = SubResource( 3 )
 anims/new_game = SubResource( 2 )
+anims/settings = SubResource( 4 )
 anims/start = SubResource( 1 )
 [connection signal="pressed" from="main/HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
