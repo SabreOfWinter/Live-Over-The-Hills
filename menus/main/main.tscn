@@ -45,31 +45,46 @@ margin_left = 100.0
 margin_top = -136.0
 margin_right = -100.0
 margin_bottom = -100.0
+size_flags_horizontal = 4
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="new_game_button" type="TextureButton" parent="HBoxContainer"]
-margin_right = 36.0
-margin_bottom = 36.0
+margin_left = 782.0
+margin_top = 3.0
+margin_right = 818.0
+margin_bottom = 33.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
 [node name="load_game_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 40.0
-margin_right = 76.0
-margin_bottom = 36.0
+margin_left = 822.0
+margin_top = 3.0
+margin_right = 858.0
+margin_bottom = 33.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
 [node name="settings_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 80.0
-margin_right = 116.0
-margin_bottom = 36.0
+margin_left = 862.0
+margin_top = 3.0
+margin_right = 898.0
+margin_bottom = 33.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
 [node name="quit_button" type="TextureButton" parent="HBoxContainer"]
-margin_left = 120.0
-margin_right = 156.0
-margin_bottom = 36.0
+margin_left = 902.0
+margin_top = 3.0
+margin_right = 938.0
+margin_bottom = 33.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 [connection signal="pressed" from="HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
