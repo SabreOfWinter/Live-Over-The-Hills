@@ -59,5 +59,12 @@ margin_left = 40.0
 margin_right = 76.0
 margin_bottom = 36.0
 texture_normal = ExtResource( 5 )
+
+[node name="settings_button" type="TextureButton" parent="HBoxContainer"]
+margin_left = 80.0
+margin_right = 116.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 5 )
 [connection signal="pressed" from="HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
