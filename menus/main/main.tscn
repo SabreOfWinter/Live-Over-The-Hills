@@ -106,15 +106,13 @@ margin_left = -200.0
 margin_top = -200.0
 margin_right = 200.0
 margin_bottom = 200.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
 texture = ExtResource( 6 )
 patch_margin_left = 200
 patch_margin_top = 200
 patch_margin_right = 200
 patch_margin_bottom = 200
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -122,18 +120,20 @@ __meta__ = {
 [node name="vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="name_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 390.0
+margin_right = 380.0
 margin_bottom = 25.0
-alignment = 1
+size_flags_vertical = 0
 
 [node name="name_line_edit" type="LineEdit" parent="new_game/nine_patch_rect/vbox_container/name_hbox_container"]
 margin_right = 351.0
@@ -152,6 +152,13 @@ margin_bottom = 25.0
 size_flags_horizontal = 0
 size_flags_stretch_ratio = 0.25
 texture_normal = ExtResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
+margin_top = 29.0
+margin_right = 380.0
+margin_bottom = 29.0
+
+[node name="CenterContainer" type="CenterContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 [connection signal="pressed" from="main/HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
