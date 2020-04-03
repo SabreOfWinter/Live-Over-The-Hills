@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://menus/main/main.gd" type="Script" id=1]
 [ext_resource path="res://menus/main/background.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://menus/textures/buttons/arrow_left.png" type="Texture" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://menus/textures/buttons/dice.png" type="Texture" id=7]
+[ext_resource path="res://menus/textures/buttons/arrow_right.png" type="Texture" id=8]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
@@ -156,9 +157,245 @@ texture_normal = ExtResource( 7 )
 [node name="HBoxContainer" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
 margin_top = 29.0
 margin_right = 380.0
-margin_bottom = 29.0
+margin_bottom = 205.0
 
 [node name="CenterContainer" type="CenterContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+margin_bottom = 176.0
+
+[node name="vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+margin_left = 4.0
+margin_right = 380.0
+margin_bottom = 176.0
+size_flags_horizontal = 3
+
+[node name="skin_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+margin_right = 376.0
+margin_bottom = 32.0
+
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+margin_left = 38.0
+margin_right = 74.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 5 )
+
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+margin_left = 117.0
+margin_right = 230.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container/labels_vbox_container"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Skin"
+align = 1
+
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container/labels_vbox_container"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 32.0
+text = "0"
+align = 1
+
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+margin_left = 272.0
+margin_right = 308.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 8 )
+
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+margin_left = 351.0
+margin_right = 376.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource( 7 )
+
+[node name="hair_hbox_container2" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+margin_top = 36.0
+margin_right = 376.0
+margin_bottom = 68.0
+
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+margin_left = 38.0
+margin_right = 74.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 5 )
+
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+margin_left = 117.0
+margin_right = 230.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2/labels_vbox_container"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Hair"
+align = 1
+
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2/labels_vbox_container"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 32.0
+text = "0"
+align = 1
+
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+margin_left = 272.0
+margin_right = 308.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 8 )
+
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+margin_left = 351.0
+margin_right = 376.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource( 7 )
+
+[node name="top_hbox_container3" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+margin_top = 72.0
+margin_right = 376.0
+margin_bottom = 104.0
+
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+margin_left = 38.0
+margin_right = 74.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 5 )
+
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+margin_left = 117.0
+margin_right = 230.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3/labels_vbox_container"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Top"
+align = 1
+
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3/labels_vbox_container"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 32.0
+text = "0"
+align = 1
+
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+margin_left = 272.0
+margin_right = 308.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 8 )
+
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+margin_left = 351.0
+margin_right = 376.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource( 7 )
+
+[node name="bottom_hbox_container4" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+margin_top = 108.0
+margin_right = 376.0
+margin_bottom = 140.0
+
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+margin_left = 38.0
+margin_right = 74.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 5 )
+
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+margin_left = 117.0
+margin_right = 230.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4/labels_vbox_container"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Bottom"
+align = 1
+
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4/labels_vbox_container"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 32.0
+text = "0"
+align = 1
+
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+margin_left = 272.0
+margin_right = 308.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 8 )
+
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+margin_left = 351.0
+margin_right = 376.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource( 7 )
+
+[node name="accessory_hbox_container5" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+margin_top = 144.0
+margin_right = 376.0
+margin_bottom = 176.0
+
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+margin_left = 38.0
+margin_right = 74.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 5 )
+
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+margin_left = 117.0
+margin_right = 230.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5/labels_vbox_container"]
+margin_right = 113.0
+margin_bottom = 14.0
+text = "Accessory"
+align = 1
+
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5/labels_vbox_container"]
+margin_top = 18.0
+margin_right = 113.0
+margin_bottom = 32.0
+text = "0"
+align = 1
+
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+margin_left = 272.0
+margin_right = 308.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+texture_normal = ExtResource( 8 )
+
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+margin_left = 351.0
+margin_right = 376.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_normal = ExtResource( 7 )
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 [connection signal="pressed" from="main/HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
