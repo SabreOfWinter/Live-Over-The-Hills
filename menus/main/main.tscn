@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://menus/main/main.gd" type="Script" id=1]
 [ext_resource path="res://menus/main/background.png" type="Texture" id=2]
@@ -12,6 +12,33 @@
 [ext_resource path="res://menus/main/male_pressed.png" type="Texture" id=10]
 [ext_resource path="res://menus/main/female_normal.png" type="Texture" id=11]
 [ext_resource path="res://menus/main/female_pressed.png" type="Texture" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/path = NodePath("new_game:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("main:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
@@ -96,6 +123,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 
 [node name="new_game" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -421,33 +449,33 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 texture_normal = ExtResource( 7 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
+[node name="colour_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
 margin_top = 263.0
 margin_right = 380.0
 margin_bottom = 380.0
 size_flags_vertical = 3
 alignment = 1
 
-[node name="red_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+[node name="red_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container"]
 margin_left = 50.0
 margin_right = 74.0
 margin_bottom = 117.0
 size_flags_horizontal = 6
 alignment = 1
 
-[node name="red_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/red_vbox_container"]
+[node name="red_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/red_vbox_container"]
 margin_right = 24.0
 margin_bottom = 14.0
 text = "Red"
 
-[node name="red_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/red_vbox_container"]
+[node name="red_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/red_vbox_container"]
 margin_top = 18.0
 margin_right = 24.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="red_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/red_vbox_container"]
+[node name="red_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/red_vbox_container"]
 margin_left = 4.0
 margin_top = 36.0
 margin_right = 20.0
@@ -456,7 +484,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 3
 max_value = 255.0
 
-[node name="green_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+[node name="green_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container"]
 margin_left = 170.0
 margin_right = 209.0
 margin_bottom = 117.0
@@ -464,19 +492,19 @@ size_flags_horizontal = 6
 size_flags_vertical = 3
 alignment = 1
 
-[node name="green_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/green_vbox_container"]
+[node name="green_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/green_vbox_container"]
 margin_right = 39.0
 margin_bottom = 14.0
 text = "Green"
 
-[node name="green_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/green_vbox_container"]
+[node name="green_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/green_vbox_container"]
 margin_top = 18.0
 margin_right = 39.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="green_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/green_vbox_container"]
+[node name="green_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/green_vbox_container"]
 margin_left = 11.0
 margin_top = 36.0
 margin_right = 27.0
@@ -485,26 +513,26 @@ size_flags_horizontal = 4
 size_flags_vertical = 3
 max_value = 255.0
 
-[node name="blue_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+[node name="blue_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container"]
 margin_left = 303.0
 margin_right = 332.0
 margin_bottom = 117.0
 size_flags_horizontal = 6
 alignment = 1
 
-[node name="blue_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/blue_vbox_container"]
+[node name="blue_label" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/blue_vbox_container"]
 margin_right = 29.0
 margin_bottom = 14.0
 text = "Blue"
 
-[node name="blue_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/blue_vbox_container"]
+[node name="blue_value" type="Label" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/blue_vbox_container"]
 margin_top = 18.0
 margin_right = 29.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="blue_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/blue_vbox_container"]
+[node name="blue_vslider" type="VSlider" parent="new_game/nine_patch_rect/vbox_container/colour_hbox_container/blue_vbox_container"]
 margin_left = 6.0
 margin_top = 36.0
 margin_right = 22.0
@@ -514,6 +542,8 @@ size_flags_vertical = 3
 max_value = 255.0
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 1 )
 [connection signal="pressed" from="main/HBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
