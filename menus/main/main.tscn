@@ -154,58 +154,58 @@ size_flags_horizontal = 0
 size_flags_stretch_ratio = 0.25
 texture_normal = ExtResource( 7 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
+[node name="character_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container"]
 margin_top = 29.0
 margin_right = 380.0
 margin_bottom = 205.0
 
-[node name="CenterContainer" type="CenterContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container"]
 margin_bottom = 176.0
 
-[node name="vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer"]
+[node name="vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container"]
 margin_left = 4.0
 margin_right = 380.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 
-[node name="skin_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+[node name="skin_hbox_container" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container"]
 margin_right = 376.0
 margin_bottom = 32.0
 
-[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container"]
 margin_left = 38.0
 margin_right = 74.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 5 )
 
-[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container"]
 margin_left = 117.0
 margin_right = 230.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 
-[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container/labels_vbox_container"]
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container/labels_vbox_container"]
 margin_right = 113.0
 margin_bottom = 14.0
 text = "Skin"
 align = 1
 
-[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container/labels_vbox_container"]
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container/labels_vbox_container"]
 margin_top = 18.0
 margin_right = 113.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container"]
 margin_left = 272.0
 margin_right = 308.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 8 )
 
-[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/skin_hbox_container"]
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/skin_hbox_container"]
 margin_left = 351.0
 margin_right = 376.0
 margin_bottom = 32.0
@@ -213,45 +213,45 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 texture_normal = ExtResource( 7 )
 
-[node name="hair_hbox_container2" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+[node name="hair_hbox_container2" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container"]
 margin_top = 36.0
 margin_right = 376.0
 margin_bottom = 68.0
 
-[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2"]
 margin_left = 38.0
 margin_right = 74.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 5 )
 
-[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2"]
 margin_left = 117.0
 margin_right = 230.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 
-[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2/labels_vbox_container"]
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2/labels_vbox_container"]
 margin_right = 113.0
 margin_bottom = 14.0
 text = "Hair"
 align = 1
 
-[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2/labels_vbox_container"]
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2/labels_vbox_container"]
 margin_top = 18.0
 margin_right = 113.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2"]
 margin_left = 272.0
 margin_right = 308.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 8 )
 
-[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/hair_hbox_container2"]
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/hair_hbox_container2"]
 margin_left = 351.0
 margin_right = 376.0
 margin_bottom = 32.0
@@ -259,45 +259,45 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 texture_normal = ExtResource( 7 )
 
-[node name="top_hbox_container3" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+[node name="top_hbox_container3" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container"]
 margin_top = 72.0
 margin_right = 376.0
 margin_bottom = 104.0
 
-[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3"]
 margin_left = 38.0
 margin_right = 74.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 5 )
 
-[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3"]
 margin_left = 117.0
 margin_right = 230.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 
-[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3/labels_vbox_container"]
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3/labels_vbox_container"]
 margin_right = 113.0
 margin_bottom = 14.0
 text = "Top"
 align = 1
 
-[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3/labels_vbox_container"]
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3/labels_vbox_container"]
 margin_top = 18.0
 margin_right = 113.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3"]
 margin_left = 272.0
 margin_right = 308.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 8 )
 
-[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/top_hbox_container3"]
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/top_hbox_container3"]
 margin_left = 351.0
 margin_right = 376.0
 margin_bottom = 32.0
@@ -305,45 +305,45 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 texture_normal = ExtResource( 7 )
 
-[node name="bottom_hbox_container4" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+[node name="bottom_hbox_container4" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container"]
 margin_top = 108.0
 margin_right = 376.0
 margin_bottom = 140.0
 
-[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4"]
 margin_left = 38.0
 margin_right = 74.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 5 )
 
-[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4"]
 margin_left = 117.0
 margin_right = 230.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 
-[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4/labels_vbox_container"]
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4/labels_vbox_container"]
 margin_right = 113.0
 margin_bottom = 14.0
 text = "Bottom"
 align = 1
 
-[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4/labels_vbox_container"]
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4/labels_vbox_container"]
 margin_top = 18.0
 margin_right = 113.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4"]
 margin_left = 272.0
 margin_right = 308.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 8 )
 
-[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/bottom_hbox_container4"]
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/bottom_hbox_container4"]
 margin_left = 351.0
 margin_right = 376.0
 margin_bottom = 32.0
@@ -351,45 +351,45 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 texture_normal = ExtResource( 7 )
 
-[node name="accessory_hbox_container5" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container"]
+[node name="accessory_hbox_container5" type="HBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container"]
 margin_top = 144.0
 margin_right = 376.0
 margin_bottom = 176.0
 
-[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+[node name="left_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5"]
 margin_left = 38.0
 margin_right = 74.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 5 )
 
-[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+[node name="labels_vbox_container" type="VBoxContainer" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5"]
 margin_left = 117.0
 margin_right = 230.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 
-[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5/labels_vbox_container"]
+[node name="type" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5/labels_vbox_container"]
 margin_right = 113.0
 margin_bottom = 14.0
 text = "Accessory"
 align = 1
 
-[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5/labels_vbox_container"]
+[node name="value" type="Label" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5/labels_vbox_container"]
 margin_top = 18.0
 margin_right = 113.0
 margin_bottom = 32.0
 text = "0"
 align = 1
 
-[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+[node name="right_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5"]
 margin_left = 272.0
 margin_right = 308.0
 margin_bottom = 32.0
 size_flags_horizontal = 6
 texture_normal = ExtResource( 8 )
 
-[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/HBoxContainer/vbox_container/accessory_hbox_container5"]
+[node name="random_texture_button" type="TextureButton" parent="new_game/nine_patch_rect/vbox_container/character_hbox_container/vbox_container/accessory_hbox_container5"]
 margin_left = 351.0
 margin_right = 376.0
 margin_bottom = 32.0
