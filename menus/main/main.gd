@@ -131,6 +131,8 @@ func create_save_game_cards():
 		save_file_container.margin_right = 100
 		save_file_container.margin_bottom = 100
 		save_file_container.margin_top = 100
+		save_file_container.size_flags_horizontal = SIZE_EXPAND_FILL
+		
 		
 		inside_container.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
 		inside_container.connect("mouse_exited", self, "player_save_card_mouse_exited")
