@@ -23,6 +23,7 @@ func load_player_save_cards():
 	save_game_list = []
 	
 	check_for_files()
+	sort_file_list()
 
 #Checks the user path to find all the save files stored in the folder, it will then create an array for that file's name and date of last save to then be stored in the array SaveGameList
 func check_for_files():
@@ -42,5 +43,11 @@ func check_for_files():
 			file_name = dir.get_next() 
 	else:
 		print("An error occurred when trying to access the path.")
+
+#Using the ListSorter class, this function will sort the arrays in the SaveGameList array with the newest dates going first and descending from there
+func sort_file_list():
+	SaveGameList.sort_custom(ListSorter, "sortList")
+
+
 
 #SETTINGS
