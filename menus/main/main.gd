@@ -16,6 +16,12 @@ func _on_quit_button_pressed():
 
 
 #LOAD GAME
+var save_game_list = []
+var save_file_to_delete
+
+func load_player_save_cards():
+	save_game_list = []
+	
 
 
 #SETTINGS
