@@ -62,13 +62,13 @@ class ListSorter:
 		return CompareYear or CompareMonth or CompareDay or CompareHour or CompareMinute or CompareSecond
 
 #Creates an array with the current filename and date of last save then adds that array into the SaveGameList array
-func create_save_game_list(i,FileName):
+func create_save_game_list(i, file_name):
 	#Opens and records the dictionary for the found file.
 	var file = File.new()
-	var FilePath = str("user://save_games/", FileName)
+	var file_path = str("user://save_games/", file_name)
 	var file_dict = {}
 	
-	file.open(FilePath, file.READ)
+	file.open(file_path, file.READ)
 	
 	file_dict = parse_json(file.get_line())
 	
@@ -81,7 +81,8 @@ func create_save_game_list(i,FileName):
 	var second = file_dict["DateOfLastSave"]["second"]
 	var current_file_name_and_date = []
 	
-	current_file_name_and_date = [FileName, year, month, day, hour, minute, second] #Player Sprite and gold
+	current_file_name_and_date = [file_name, year, month, day, hour, minute, second] #Player Sprite and gold
 	save_game_list.append(current_file_name_and_date)
+	print("list: ", save_game_list)
 
 #SETTINGS
