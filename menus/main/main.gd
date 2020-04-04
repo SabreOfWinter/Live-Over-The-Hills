@@ -12,10 +12,10 @@ func _on_settings_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().quit()
 
-#NEW GAME
+#NEW GAME--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-#LOAD GAME
+#LOAD GAME-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var save_game_list = []
 var save_file_to_delete
 
@@ -24,11 +24,13 @@ func load_player_save_cards():
 	
 	check_for_files()
 	sort_file_list()
+	
 
 #Checks the user path to find all the save files stored in the folder, it will then create an array for that file's name and date of last save to then be stored in the array SaveGameList
 func check_for_files():
 	var path = "user://save_games/"
 	var dir = Directory.new()
+
 	if dir.open(path) == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
@@ -85,4 +87,4 @@ func create_save_game_list(i, file_name):
 	save_game_list.append(current_file_name_and_date)
 	print("list: ", save_game_list)
 
-#SETTINGS
+#SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
