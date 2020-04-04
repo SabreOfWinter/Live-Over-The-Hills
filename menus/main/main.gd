@@ -92,7 +92,6 @@ func create_save_game_list(i, file_name):
 	
 	current_file_name_and_date = [file_name, year, month, day, hour, minute, second] #Player Sprite and gold
 	save_game_list.append(current_file_name_and_date)
-	print("list: ", save_game_list)
 
 func create_save_game_cards():
 	var file_dict = {}
@@ -124,6 +123,10 @@ func create_save_game_cards():
 		get_node(get_path_to(information_container)).add_child(player_name_label)
 		get_node(get_path_to(information_container)).add_child(player_last_date_label)
 		get_node(get_path_to(information_container)).add_child(player_money_label)
+		
+		#Clean file path to file name
+		file_path.erase(file_path.length()-4,4)
+		file_path.erase(0, 18)
 		
 		#Setting the elements of each player save file 
 		save_file_container.name = file_path
@@ -158,7 +161,7 @@ func create_save_game_cards():
 		
 		delete_button.text = "X"
 		delete_button.size_flags_vertical = 0
-		delete_button.connect("pressed", self, "DeleteButtonPressed", [file_path])
+		delete_button.connect("pressed", self, "delete_button_pressed", [file_path])
 		
 		for node in get_node(get_path_to(inside_container)).get_children():
 			node.show_behind_parent = true
@@ -183,5 +186,18 @@ func player_save_card_pressed(ev, save_file_path):
 		#LOAD GAME
 		#global.SelectedSaveFilePath = SaveFilePath
 		#LoadingScreen.goto_scene("res://scenes/game/GameWorld.tscn")
+
+func delete_button_pressed(save_file_path_to_delete):
+	save_file_to_delete = save_file_path_to_delete
+	$ConfirmationDialog.show()
+	$ConfirmationDialog.window_title = "Delete file!"
+	$ConfirmationDialog.dialog_text = str("Are you sure you wish to delete: \n", save_file_path_to_delete, "?")
+	$ConfirmationDialog.connect("confirmed", self, "delete_file")
+
+func delete_file():
+	$ConfirmationDialog.disconnect("confirmed", self, "delete_file")
+	var dir = Directory.new()
+	$load_game/nine_patch_rect/scroll_container/vbox_container.get_node(save_file_to_delete).free() #Deletes save game card of file
+	dir.remove(str("user://save_games/", save_file_to_delete, ".dat")) #Deletes file in folder
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
