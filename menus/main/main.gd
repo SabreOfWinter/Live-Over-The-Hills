@@ -30,7 +30,12 @@ func load_player_save_cards():
 func check_for_files():
 	var path = "user://save_games/"
 	var dir = Directory.new()
-
+	
+	#Create directory if it doesn't exist
+	if !dir.dir_exists(path):
+		dir.make_dir(path)
+	
+	#Open directory
 	if dir.open(path) == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
