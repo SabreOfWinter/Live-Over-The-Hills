@@ -1,6 +1,7 @@
 extends Control
 
 const PATH = "user://save_games/"
+const LOAD_GAME_CARD_CONTAINER_PATH = "load_game/nine_patch_rect/scroll_container/vbox_container"
 
 func _on_new_game_button_pressed():
 	$animation_player.play("new_game")
@@ -115,7 +116,7 @@ func create_save_game_cards():
 		var delete_button = Button.new()
 		
 		#Adds the nodes to create each player card
-		get_node("load_game/nine_patch_rect/scroll_container/vbox_container").add_child(save_file_container)
+		get_node(LOAD_GAME_CARD_CONTAINER_PATH).add_child(save_file_container)
 		get_node(get_path_to(save_file_container)).add_child(inside_container)
 		get_node(get_path_to(inside_container)).add_child(player_model)
 		get_node(get_path_to(inside_container)).add_child(information_container)
@@ -131,16 +132,16 @@ func create_save_game_cards():
 		save_file_container.margin_bottom = 100
 		save_file_container.margin_top = 100
 		
-		inside_container.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
-		inside_container.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		inside_container.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
+		inside_container.connect("mouse_exited", self, "player_save_card_mouse_exited")
 		inside_container.connect("gui_input", self, "PlayerSaveCardPressed", [file_path])#Mouse press
 		
-		player_model.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
-		player_model.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		player_model.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
+		player_model.connect("mouse_exited", self, "player_save_card_mouse_exited")
 		#Mouse press
 		
-		information_container.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
-		information_container.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		information_container.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
+		information_container.connect("mouse_exited", self, "player_save_card_mouse_exited")
 		#Mouse press
 		
 		player_model.texture = load("res://playerIcon.png")
@@ -159,6 +160,19 @@ func create_save_game_cards():
 		
 		for node in get_node(get_path_to(inside_container)).get_children():
 			node.show_behind_parent = true
-		
+
+func player_save_card_mouse_entered(container_name):
+	container_name.erase(0,14)
+	if $ConfirmationDialog.visible == false:
+		for i in get_node(LOAD_GAME_CARD_CONTAINER_PATH).get_children():
+			var node_name = i.name
+			node_name.erase(0,14)
+			if node_name == container_name:
+				i.modulate = Color(1.5, 1.5, 1.5)
+
+func player_save_card_mouse_exited():
+#	self_modulate = Color(1, 1, 1)
+	for i in get_node(LOAD_GAME_CARD_CONTAINER_PATH).get_children():
+		i.modulate = Color(1, 1, 1)
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
