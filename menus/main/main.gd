@@ -1,5 +1,7 @@
 extends Control
 
+const PATH = "user://save_games/"
+
 func _on_new_game_button_pressed():
 	$animation_player.play("new_game")
 
@@ -24,19 +26,18 @@ func load_player_save_cards():
 	
 	check_for_files()
 	sort_file_list()
-	
+	create_save_game_cards()
 
 #Checks the user path to find all the save files stored in the folder, it will then create an array for that file's name and date of last save to then be stored in the array SaveGameList
 func check_for_files():
-	var path = "user://save_games/"
 	var dir = Directory.new()
 	
 	#Create directory if it doesn't exist
-	if !dir.dir_exists(path):
-		dir.make_dir(path)
+	if !dir.dir_exists(PATH):
+		dir.make_dir(PATH)
 	
 	#Open directory
-	if dir.open(path) == OK:
+	if dir.open(PATH) == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		var i = 0
@@ -72,7 +73,7 @@ class ListSorter:
 func create_save_game_list(i, file_name):
 	#Opens and records the dictionary for the found file.
 	var file = File.new()
-	var file_path = str("user://save_games/", file_name)
+	var file_path = str(PATH, file_name)
 	var file_dict = {}
 	
 	file.open(file_path, file.READ)
@@ -91,5 +92,73 @@ func create_save_game_list(i, file_name):
 	current_file_name_and_date = [file_name, year, month, day, hour, minute, second] #Player Sprite and gold
 	save_game_list.append(current_file_name_and_date)
 	print("list: ", save_game_list)
+
+func create_save_game_cards():
+	var file_dict = {}
+	
+	for current_save_game in save_game_list.size():
+		var file = File.new()
+		var file_path = str(PATH, save_game_list[current_save_game][0])
+		var file_content = {}
+		
+		file.open(file_path, file.READ)
+		file_content = parse_json(file.get_line())
+		
+		#Create each game card item in this for loop
+		var save_file_container = MarginContainer.new()
+		var inside_container = HBoxContainer.new()
+		var player_model = TextureRect.new() #Change to the player model
+		var information_container = VBoxContainer.new()
+		var player_name_label = Label.new()
+		var player_last_date_label = Label.new()
+		var player_money_label = Label.new()
+		var delete_button = Button.new()
+		
+		#Adds the nodes to create each player card
+		get_node("load_game/nine_patch_rect/scroll_container/vbox_container").add_child(save_file_container)
+		get_node(get_path_to(save_file_container)).add_child(inside_container)
+		get_node(get_path_to(inside_container)).add_child(player_model)
+		get_node(get_path_to(inside_container)).add_child(information_container)
+		get_node(get_path_to(inside_container)).add_child(delete_button)
+		get_node(get_path_to(information_container)).add_child(player_name_label)
+		get_node(get_path_to(information_container)).add_child(player_last_date_label)
+		get_node(get_path_to(information_container)).add_child(player_money_label)
+		
+		#Setting the elements of each player save file 
+		save_file_container.name = file_path
+		save_file_container.margin_left = 100
+		save_file_container.margin_right = 100
+		save_file_container.margin_bottom = 100
+		save_file_container.margin_top = 100
+		
+		inside_container.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
+		inside_container.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		inside_container.connect("gui_input", self, "PlayerSaveCardPressed", [file_path])#Mouse press
+		
+		player_model.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
+		player_model.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		#Mouse press
+		
+		information_container.connect("mouse_entered", self, "PlayerSaveCardMouseEntered", [save_file_container.name])
+		information_container.connect("mouse_exited", self, "PlayerSaveCardMouseExited")
+		#Mouse press
+		
+		player_model.texture = load("res://playerIcon.png")
+		#Set player model clothing, skin, hair
+		
+		information_container.size_flags_vertical = 3
+		information_container.size_flags_horizontal = 3
+		
+		player_name_label.text = file_content["Name"]
+		player_last_date_label.text = str(file_content["DateOfLastSave"]["day"], "/", file_content["DateOfLastSave"]["month"], "/", file_content["DateOfLastSave"]["year"])#str(SaveGameList[CurrentSaveGame][0])
+		player_money_label.text = str(file_content["Money"], "Symbol")
+		
+		delete_button.text = "X"
+		delete_button.size_flags_vertical = 0
+		delete_button.connect("pressed", self, "DeleteButtonPressed", [file_path])
+		
+		for node in get_node(get_path_to(inside_container)).get_children():
+			node.show_behind_parent = true
+		
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
