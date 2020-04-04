@@ -134,7 +134,7 @@ func create_save_game_cards():
 		
 		inside_container.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
 		inside_container.connect("mouse_exited", self, "player_save_card_mouse_exited")
-		inside_container.connect("gui_input", self, "PlayerSaveCardPressed", [file_path])#Mouse press
+		inside_container.connect("gui_input", self, "player_save_card_pressed", [file_path])#Mouse press
 		
 		player_model.connect("mouse_entered", self, "player_save_card_mouse_entered", [save_file_container.name])
 		player_model.connect("mouse_exited", self, "player_save_card_mouse_exited")
@@ -174,5 +174,12 @@ func player_save_card_mouse_exited():
 #	self_modulate = Color(1, 1, 1)
 	for i in get_node(LOAD_GAME_CARD_CONTAINER_PATH).get_children():
 		i.modulate = Color(1, 1, 1)
+
+func player_save_card_pressed(ev, save_file_path):
+	if ev.is_action_pressed("ui_left_select") and $ConfirmationDialog.visible == false:
+		pass
+		#LOAD GAME
+		#global.SelectedSaveFilePath = SaveFilePath
+		#LoadingScreen.goto_scene("res://scenes/game/GameWorld.tscn")
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
