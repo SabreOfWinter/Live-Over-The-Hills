@@ -288,6 +288,7 @@ __meta__ = {
 }
 
 [node name="main" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -850,12 +851,49 @@ __meta__ = {
 }
 
 [node name="settings" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="centerContainer" type="CenterContainer" parent="settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.12244
+margin_right = -1.12244
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vBoxContainer" type="VBoxContainer" parent="settings/centerContainer"]
+margin_left = 926.0
+margin_top = 494.0
+margin_right = 994.0
+margin_bottom = 586.0
+
+[node name="generalButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+margin_right = 68.0
+margin_bottom = 20.0
+text = "General"
+
+[node name="graphicsButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+margin_top = 24.0
+margin_right = 68.0
+margin_bottom = 44.0
+text = "Graphics"
+
+[node name="soundButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+margin_top = 48.0
+margin_right = 68.0
+margin_bottom = 68.0
+text = "Sound"
+
+[node name="controlsButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+margin_top = 72.0
+margin_right = 68.0
+margin_bottom = 92.0
+text = "Controls"
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 autoplay = "start"
@@ -890,4 +928,8 @@ __meta__ = {
 [connection signal="pressed" from="main/HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="settings/centerContainer/vBoxContainer/generalButton" to="." method="_on_generalButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/vBoxContainer/graphicsButton" to="." method="_on_graphicsButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/vBoxContainer/soundButton" to="." method="_on_soundButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/vBoxContainer/controlsButton" to="." method="_on_controlsButton_pressed"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

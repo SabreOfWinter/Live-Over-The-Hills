@@ -204,6 +204,16 @@ func delete_file():
 	dir.remove(str("user://save_games/", save_file_to_delete, ".dat")) #Deletes file in folder
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var settings = {}
 
+func _on_generalButton_pressed():
+	pass # Replace with function body.
 
+func _on_graphicsButton_pressed():
+	pass # Replace with function body.
 
+func _on_soundButton_pressed():
+	pass # Replace with function body.
+
+func _on_controlsButton_pressed():
+	pass # Replace with function body.
