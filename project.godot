@@ -28,6 +28,14 @@ settings="*res://settings.gd"
 window/size/width=1920
 window/size/height=1080
 
+[editor_plugins]
+
+enabled=PoolStringArray( "zylann.project_stats" )
+
+[node]
+
+name_casing=1
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
