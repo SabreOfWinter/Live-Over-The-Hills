@@ -23,6 +23,9 @@ var settings_dict = {
 		}
 	}
 
+func get_settings_dict():
+	return settings_dict
+
 func save_settings():
 	for section in settings_dict.keys():
 		for key in settings_dict[section].keys():

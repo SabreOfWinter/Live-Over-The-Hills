@@ -16,7 +16,11 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 func _on_back_button_pressed():
-	$animation_player.play("back_to_menu")
+	#Changes depending on the menu open
+	if $new_game.visible == true || $load_game.visible == true || ($settings.visible == true && $settings/centerContainer/buttonsContainer.visible == true):
+		$animation_player.play("back_to_menu")
+	elif $settings.visible == true && $settings/centerContainer/buttonsContainer.visible == false && $settings/centerContainer/ninePatchRect.visible == true:
+		$animation_player.play("settings_back")
 
 #NEW GAME--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -204,16 +208,21 @@ func delete_file():
 	dir.remove(str("user://save_games/", save_file_to_delete, ".dat")) #Deletes file in folder
 
 #SETTINGS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const Settings_script = preload("res://settings.gd")
+var settings_instance = Settings_script.new()
 var settings = {}
 
 func _on_generalButton_pressed():
-	pass # Replace with function body.
+	print('general')
+	settings_instance.load_settings()
+	print(settings_instance.settings_dict['General'])
+	$animation_player.play("open_general")
 
 func _on_graphicsButton_pressed():
-	pass # Replace with function body.
+	$animation_player.play("open_graphics")
 
 func _on_soundButton_pressed():
-	pass # Replace with function body.
+	$animation_player.play("open_sound")
 
 func _on_controlsButton_pressed():
-	pass # Replace with function body.
+	$animation_player.play("open_controls")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://menus/main/main.gd" type="Script" id=1]
 [ext_resource path="res://menus/main/background.png" type="Texture" id=2]
@@ -168,6 +168,306 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "open_controls"
+tracks/0/type = "value"
+tracks/0/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "open_general"
+tracks/0/type = "value"
+tracks/0/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "open_graphics"
+tracks/0/type = "value"
+tracks/0/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "open_sound"
+tracks/0/type = "value"
+tracks/0/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
 [sub_resource type="Animation" id=4]
 resource_name = "settings"
 tracks/0/type = "value"
@@ -205,6 +505,105 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "settings_back"
+tracks/0/type = "value"
+tracks/0/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("settings/centerContainer/buttonsContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("settings/centerContainer/ninePatchRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -288,7 +687,6 @@ __meta__ = {
 }
 
 [node name="main" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -851,6 +1249,7 @@ __meta__ = {
 }
 
 [node name="settings" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -860,47 +1259,130 @@ __meta__ = {
 [node name="centerContainer" type="CenterContainer" parent="settings"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.12244
-margin_right = -1.12244
+margin_left = -5.84167
+margin_top = -1.88776
+margin_right = -5.84167
+margin_bottom = -1.8877
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="vBoxContainer" type="VBoxContainer" parent="settings/centerContainer"]
+[node name="buttonsContainer" type="VBoxContainer" parent="settings/centerContainer"]
+visible = false
 margin_left = 926.0
 margin_top = 494.0
 margin_right = 994.0
 margin_bottom = 586.0
 
-[node name="generalButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+[node name="generalButton" type="Button" parent="settings/centerContainer/buttonsContainer"]
 margin_right = 68.0
 margin_bottom = 20.0
 text = "General"
 
-[node name="graphicsButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+[node name="graphicsButton" type="Button" parent="settings/centerContainer/buttonsContainer"]
 margin_top = 24.0
 margin_right = 68.0
 margin_bottom = 44.0
 text = "Graphics"
 
-[node name="soundButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+[node name="soundButton" type="Button" parent="settings/centerContainer/buttonsContainer"]
 margin_top = 48.0
 margin_right = 68.0
 margin_bottom = 68.0
 text = "Sound"
 
-[node name="controlsButton" type="Button" parent="settings/centerContainer/vBoxContainer"]
+[node name="controlsButton" type="Button" parent="settings/centerContainer/buttonsContainer"]
 margin_top = 72.0
 margin_right = 68.0
 margin_bottom = 92.0
 text = "Controls"
+
+[node name="ninePatchRect" type="NinePatchRect" parent="settings/centerContainer"]
+margin_left = 832.0
+margin_top = 412.0
+margin_right = 1088.0
+margin_bottom = 668.0
+texture = ExtResource( 6 )
+patch_margin_left = 128
+patch_margin_top = 128
+patch_margin_right = 128
+patch_margin_bottom = 128
+
+[node name="marginContainer" type="MarginContainer" parent="settings/centerContainer/ninePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vBoxContainer" type="VBoxContainer" parent="settings/centerContainer/ninePatchRect/marginContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+
+[node name="general" type="MarginContainer" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer"]
+margin_right = 256.0
+margin_bottom = 14.0
+
+[node name="label" type="Label" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/general"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "General"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="graphics" type="MarginContainer" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer"]
+visible = false
+margin_top = 18.0
+margin_right = 256.0
+margin_bottom = 32.0
+
+[node name="label" type="Label" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/graphics"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Graphics"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound" type="MarginContainer" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer"]
+visible = false
+margin_top = 18.0
+margin_right = 256.0
+margin_bottom = 32.0
+
+[node name="label" type="Label" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/sound"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Sound"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controls" type="MarginContainer" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer"]
+visible = false
+margin_right = 256.0
+margin_bottom = 14.0
+
+[node name="label" type="Label" parent="settings/centerContainer/ninePatchRect/marginContainer/vBoxContainer/controls"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 autoplay = "start"
 anims/back_to_menu = SubResource( 1 )
 anims/load_game = SubResource( 2 )
 anims/new_game = SubResource( 3 )
+anims/open_controls = SubResource( 6 )
+anims/open_general = SubResource( 7 )
+anims/open_graphics = SubResource( 8 )
+anims/open_sound = SubResource( 9 )
 anims/settings = SubResource( 4 )
+anims/settings_back = SubResource( 10 )
 anims/start = SubResource( 5 )
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
@@ -915,6 +1397,7 @@ margin_bottom = 35.0
 popup_exclusive = true
 
 [node name="back_button" type="TextureButton" parent="."]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
@@ -928,8 +1411,8 @@ __meta__ = {
 [connection signal="pressed" from="main/HBoxContainer/load_game_button" to="." method="_on_load_game_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="main/HBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="settings/centerContainer/vBoxContainer/generalButton" to="." method="_on_generalButton_pressed"]
-[connection signal="pressed" from="settings/centerContainer/vBoxContainer/graphicsButton" to="." method="_on_graphicsButton_pressed"]
-[connection signal="pressed" from="settings/centerContainer/vBoxContainer/soundButton" to="." method="_on_soundButton_pressed"]
-[connection signal="pressed" from="settings/centerContainer/vBoxContainer/controlsButton" to="." method="_on_controlsButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/buttonsContainer/generalButton" to="." method="_on_generalButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/buttonsContainer/graphicsButton" to="." method="_on_graphicsButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/buttonsContainer/soundButton" to="." method="_on_soundButton_pressed"]
+[connection signal="pressed" from="settings/centerContainer/buttonsContainer/controlsButton" to="." method="_on_controlsButton_pressed"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
