@@ -735,6 +735,7 @@ margin_bottom = 30.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
 
 [node name="settings_button" type="TextureButton" parent="main/HBoxContainer"]
 margin_left = 962.0

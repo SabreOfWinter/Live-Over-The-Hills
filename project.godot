@@ -32,6 +32,10 @@ window/size/height=1080
 
 enabled=PoolStringArray( "zylann.project_stats" )
 
+[global]
+
+maximise=true
+
 [node]
 
 name_casing=1

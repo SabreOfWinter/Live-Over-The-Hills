@@ -3,6 +3,9 @@ extends Control
 const PATH = "user://save_games/"
 const LOAD_GAME_CARD_CONTAINER_PATH = "load_game/nine_patch_rect/scroll_container/vbox_container"
 
+func _ready():
+	load_player_save_cards()
+
 func _on_new_game_button_pressed():
 	$animation_player.play("new_game")
 
@@ -35,6 +38,9 @@ func load_player_save_cards():
 	check_for_files()
 	sort_file_list()
 	create_save_game_cards()
+	
+	if save_game_list.size() == 0:
+		$main/HBoxContainer/load_game_button.disabled = true
 
 #Checks the user path to find all the save files stored in the folder, it will then create an array for that file's name and date of last save to then be stored in the array SaveGameList
 func check_for_files():
@@ -219,10 +225,27 @@ func _on_generalButton_pressed():
 	$animation_player.play("open_general")
 
 func _on_graphicsButton_pressed():
+	print('graphics')
+	settings_instance.load_settings()
+	print(settings_instance.settings_dict['Graphics'])
 	$animation_player.play("open_graphics")
+	#DisplayMonitor
+	#WindowMode
+	
 
 func _on_soundButton_pressed():
+	print('sound')
+	settings_instance.load_settings()
+	print(settings_instance.settings_dict['Sound'])
 	$animation_player.play("open_sound")
+	#Ambient
+	#Dialogue
+	#Master
+	#Music
 
 func _on_controlsButton_pressed():
+	print('controls')
+	settings_instance.load_settings()
+	print(settings_instance.settings_dict['Controls'])
+
 	$animation_player.play("open_controls")
