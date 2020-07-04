@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/entities/humans/shadow.tex" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 4.63778 )
+
+[node name="human_model" type="Skeleton2D"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 12 )
+shape = SubResource( 1 )
+
+[node name="shadow" type="Sprite" parent="."]
+position = Vector2( -0.204288, 16.9952 )
+scale = Vector2( 0.0846894, 0.0328928 )
+texture = ExtResource( 1 )
